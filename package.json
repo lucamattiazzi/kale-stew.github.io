@@ -1,6 +1,6 @@
 {
-  "name": "kyliestewart.tech",
-  "version": "3.0.0",
+  "name": "kylieis.online",
+  "version": "3.2.0",
   "description": "Kylie Stewart's personal landing page",
   "license": "MIT",
   "repository": {
@@ -15,8 +15,7 @@
     "prettier": "prettier \"**/*.{js,json,ts,css,md}\"",
     "build": "react-scripts build",
     "predeploy": "yarn clean && yarn build",
-    "deploy": "gh-pages -b master -d build",
-    "eject": "react-scripts eject"
+    "deploy": "gh-pages -b master -d build"
   },
   "dependencies": {
     "@material-ui/core": "^4.8.2",
