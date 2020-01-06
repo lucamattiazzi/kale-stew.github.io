@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { fadeInDown } from 'react-animations';
 import Avatar from '@material-ui/core/Avatar';
-import Footer from './footer';
-import Headshot from './headshot.png';
+import Card, { CardWrapper } from './components/card';
+import Footer from './components/footer';
+import Headshot from './components/headshot.png';
 
 import './app.css';
+
+const projects = require('./projects.json');
 
 const TitleWithHeadshot = styled.div`
   background-color: transparent;
@@ -30,7 +33,7 @@ const StyledSpan = styled.span`
 
 export default function App() {
   return (
-    <React.Fragment>
+    <Fragment>
       <header />
       <body>
         <TitleWithHeadshot>
@@ -44,8 +47,13 @@ export default function App() {
             <StyledSpan>I'm Kylie</StyledSpan>
           </Title>
         </TitleWithHeadshot>
+        <CardWrapper>
+          {projects.map(project => (
+            <Card item={project} />
+          ))}
+        </CardWrapper>
       </body>
       <Footer />
-    </React.Fragment>
+    </Fragment>
   );
 }

@@ -29,13 +29,11 @@ a:active {
   color: #cb067a;
   text-decoration: none;
   font-size: 14px;
-  margin-left: 25px;
 }
 
 a:hover {
   border-bottom: 1.5px solid #cb067a;
   font-style: italic;
-  margin-left: 25px;
 }
 
 b {
