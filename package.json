@@ -1,0 +1,45 @@
+{
+  "name": "kyliestewart.tech",
+  "version": "3.0.0",
+  "description": "Kylie Stewart's personal landing page",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kale-stew/kale-stew.github.io.git"
+  },
+  "homepage": "https://kale-stew.github.io",
+  "scripts": {
+    "start": "react-scripts start",
+    "clean": "rm -rf build",
+    "format": "yarn prettier -- --write",
+    "prettier": "prettier \"**/*.{js,json,ts,css,md}\"",
+    "build": "react-scripts build",
+    "predeploy": "yarn clean && yarn build",
+    "deploy": "gh-pages -b master -d build",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.8.2",
+    "react": "^16.10.2",
+    "react-animations": "^1.0.0",
+    "react-dom": "^16.10.2",
+    "react-scripts": "3.2.0",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "prettier": "^1.18.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
