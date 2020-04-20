@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { fadeInDown } from 'react-animations';
-import Avatar from '@material-ui/core/Avatar';
+import { bounceInDown } from 'react-animations';
 import Card, { CardWrapper } from './components/card';
 import Footer from './components/footer';
-import Headshot from './components/headshot.png';
+import Headshot from './assets/headshot.png';
 
 import './app.css';
 
@@ -17,42 +16,54 @@ const TitleWithHeadshot = styled.div`
   align-items: center;
   max-height: 400px;
   padding: 90px 50px 45px 50px;
-  animation: 2s ${keyframes`${fadeInDown}`};
+  animation: 1s ${keyframes`${bounceInDown}`};
+
+  @media (max-width: 1024px) {
+    padding: 2rem 0;
+    flex-direction: column;
+    font-size: 24px;
+  }
 `;
 
-const Title = styled.h1`
+const TitleWrapper = styled.span`
   display: flex;
   flex-direction: column;
   padding-left: 70px;
 `;
 
-const StyledSpan = styled.span`
-  background-color: transparent;
-  margin-bottom: 20px;
+const Title = styled.h1`
+  margin-bottom: 4px;
+  text-align: left;
+
+  @media (max-width: 1024px) {
+    width: 300px;
+    font-size: 58px;
+    line-height: 42px;
+  }
+`;
+
+const TitleImg = styled.img`
+  width: 12rem;
+  height: 12rem;
+  border-radius: 6rem;
 `;
 
 export default function App() {
   return (
     <Fragment>
       <header />
-      <body>
-        <TitleWithHeadshot>
-          <Avatar
-            src={Headshot}
-            style={{ width: 224, height: 224, borderRadius: 120 }}
-            alt="Kylie Stewart's headshot"
-          />
-          <Title>
-            <StyledSpan style={{ textAlign: 'left' }}>Hi,</StyledSpan>
-            <StyledSpan>I'm Kylie</StyledSpan>
-          </Title>
-        </TitleWithHeadshot>
-        <CardWrapper>
-          {projects.map(project => (
-            <Card item={project} />
-          ))}
-        </CardWrapper>
-      </body>
+      <TitleWithHeadshot>
+        <TitleImg src={Headshot} alt="Kylie Stewart's headshot" />
+        <TitleWrapper>
+          <Title>Hi,</Title>
+          <Title>I'm Kylie</Title>
+        </TitleWrapper>
+      </TitleWithHeadshot>
+      <CardWrapper>
+        {projects.map(project => (
+          <Card item={project} key={project.title} />
+        ))}
+      </CardWrapper>
       <Footer />
     </Fragment>
   );
