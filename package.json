@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/kale-stew/kale-stew.github.io.git"
   },
-  "homepage": "https://kale-stew.github.io",
+  "homepage": "https://kylieis.online",
   "scripts": {
     "start": "react-scripts start",
     "clean": "rm -rf build",
