@@ -55,7 +55,7 @@ const ContentWrapper = styled.div`
 export default function App() {
   return (
     <Fragment>
-      <header />
+      <header>Kylie Stewart</header>
       <ContentWrapper>
         <TitleWithHeadshot>
           <TitleImg src={Headshot} alt="Kylie Stewart's headshot" />

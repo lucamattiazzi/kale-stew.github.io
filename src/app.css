@@ -1,6 +1,13 @@
 header {
+  font-family: 'Fira Sans', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   background-image: linear-gradient(to right, #2f1c94, #cb067a);
-  min-height: 75px;
+  min-height: 65px;
+  color: #ffffffd1;
+  font-style: italic;
+  padding-right: 1rem;
 }
 
 h1 {
