@@ -48,8 +48,6 @@ export default function ProjectCard({ item }) {
       <h3 className={classes.subtitle}>{item.subtitle}</h3>
       <a
         className={classes.link}
-        target="_blank"
-        rel="noopener noreferrer"
         href={item.link}
       >
         Go to ↗
