@@ -35,7 +35,11 @@ export const CardWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     font-size: 24px;
+    :last-child {
+      margin-bottom: 5rem;
+    }
   }
+
 `;
 
 export default function ProjectCard({ item }) {

@@ -22,15 +22,6 @@ li {
   margin-left: -35px;
 }
 
-.content {
-  height: 100%;
-  padding: 25px 20px;
-}
-
-.inner-content {
-  padding: 20px;
-}
-
 footer {
   position: fixed;
   width: 100%;
