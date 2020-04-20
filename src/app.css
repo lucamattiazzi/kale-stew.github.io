@@ -32,7 +32,8 @@ li {
 }
 
 footer {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   bottom: 0;
   background-image: linear-gradient(to right, #2f1c94, #cb067a);
   min-height: 55px;

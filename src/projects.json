@@ -1,14 +1,20 @@
 [
   {
+    "title": "Now",
+    "subtitle": "What I'm doing *now*",
+    "topic": "blog",
+    "link": "https://kylieis.online/now"
+  },
+  {
     "title": "Talks",
     "subtitle": "All of my talks in one place",
     "topic": "speaking",
     "link": "https://kylieis.online/talks"
   },
   {
-    "title": "Now",
-    "subtitle": "What I'm doing *now*",
+    "title": "Blog",
+    "subtitle": "Long-form Twitter",
     "topic": "blog",
-    "link": "https://kylieis.online/now"
+    "link": "https://kylieis.online/blog"
   }
 ]

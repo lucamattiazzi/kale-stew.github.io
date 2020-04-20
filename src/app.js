@@ -15,7 +15,7 @@ const TitleWithHeadshot = styled.div`
   justify-content: center;
   align-items: center;
   max-height: 400px;
-  padding: 90px 50px 45px 50px;
+  padding: 45px 50px 45px 50px;
   animation: 1s ${keyframes`${bounceInDown}`};
 
   @media (max-width: 1024px) {
@@ -48,22 +48,28 @@ const TitleImg = styled.img`
   border-radius: 6rem;
 `;
 
+const ContentWrapper = styled.div`
+  height: 100%;
+`;
+
 export default function App() {
   return (
     <Fragment>
       <header />
-      <TitleWithHeadshot>
-        <TitleImg src={Headshot} alt="Kylie Stewart's headshot" />
-        <TitleWrapper>
-          <Title>Hi,</Title>
-          <Title>I'm Kylie</Title>
-        </TitleWrapper>
-      </TitleWithHeadshot>
-      <CardWrapper>
-        {projects.map(project => (
-          <Card item={project} key={project.title} />
-        ))}
-      </CardWrapper>
+      <ContentWrapper>
+        <TitleWithHeadshot>
+          <TitleImg src={Headshot} alt="Kylie Stewart's headshot" />
+          <TitleWrapper>
+            <Title>Hi,</Title>
+            <Title>I'm Kylie</Title>
+          </TitleWrapper>
+        </TitleWithHeadshot>
+        <CardWrapper>
+          {projects.map(project => (
+            <Card item={project} key={project.title} />
+          ))}
+        </CardWrapper>
+      </ContentWrapper>
       <Footer />
     </Fragment>
   );
