@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 import { Layout } from '../layout'
 import { Head } from '../components/head'
+import { Intro } from '../components/intro'
 import { ProjectCard } from '../components/card'
 
 import projects from '../../content/data/projects'
@@ -16,17 +17,7 @@ export default ({ data, location }) => {
     <Layout location={location} title={siteMetadata.title}>
       <Head title={HOME_TITLE} keywords={siteMetadata.keywords} />
       <div className="lander">
-        <div className="intro">
-          <div>
-            👋 Hi, I'm <b>Kylie Stewart</b>, a Software Engineer in Denver,
-            Colorado.
-          </div>
-          <div>
-            👩‍💻 I currently work at a javascript consultancy named{' '}
-            <b>Formidable</b>.
-          </div>
-          <div>🏔️ When I'm not working, I like to hike with my dog, Otis.</div>
-        </div>
+        <Intro />
         <div className="project-wrapper">
           {projects.map(project => (
             <ProjectCard item={project} key={project.title} />
@@ -36,6 +27,29 @@ export default ({ data, location }) => {
     </Layout>
   )
 }
+
+const bioQuery = graphql`
+  query BioQuery {
+    avatar: file(absolutePath: { regex: "/headshot.png/" }) {
+      childImageSharp {
+        fixed(width: 72, height: 72) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        author
+        introduction
+        social {
+          twitter
+          github
+          linkedin
+        }
+      }
+    }
+  }
+`
 
 export const pageQuery = graphql`
   query {
