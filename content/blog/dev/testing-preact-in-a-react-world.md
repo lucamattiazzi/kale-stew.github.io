@@ -1,5 +1,5 @@
 ---
-title:  Testing Preact in a React-Focused Codebase
+title: Testing Preact in a React-Focused Codebase
 date: 2020-05-03 08:46:11
 category: dev
 draft: true
@@ -34,10 +34,10 @@ Given these test components...
 class ChildWithShouldComponentUpdate extends React.Component {
   shouldComponentUpdate(nextProps) {
     // this.props.children is a h1 with a circular reference to its owner, Container
-    return !equal(this.props, nextProps);
+    return !equal(this.props, nextProps)
   }
   render() {
-    return null;
+    return null
   }
 }
 
@@ -47,9 +47,9 @@ class Container extends React.Component {
     return React.createElement(ChildWithShouldComponentUpdate, {
       children: [
         React.createElement('h1', this.props.title || ''),
-        React.createElement('h2', this.props.subtitle || '')
-      ]
-    });
+        React.createElement('h2', this.props.subtitle || ''),
+      ],
+    })
   }
 }
 ```
@@ -58,40 +58,43 @@ class Container extends React.Component {
 
 ```js
 // test setup
-let sandbox;
-let warnStub;
-let childRenderSpy;
+let sandbox
+let warnStub
+let childRenderSpy
 
 beforeEach(() => {
-  sandbox = sinon.createSandbox();
-  warnStub = sandbox.stub(console, 'warn');
-  childRenderSpy = sandbox.spy(ChildWithShouldComponentUpdate.prototype, 'render');
-});
+  sandbox = sinon.createSandbox()
+  warnStub = sandbox.stub(console, 'warn')
+  childRenderSpy = sandbox.spy(
+    ChildWithShouldComponentUpdate.prototype,
+    'render'
+  )
+})
 
 afterEach(() => {
-  sandbox.restore();
-});
+  sandbox.restore()
+})
 
 // test 1
 it('compares without warning or errors', () => {
-  const testRenderer = ReactTestRenderer.create(React.createElement(Container));
-  testRenderer.update(React.createElement(Container));
-  assert.strictEqual(warnStub.callCount, 0);
-});
+  const testRenderer = ReactTestRenderer.create(React.createElement(Container))
+  testRenderer.update(React.createElement(Container))
+  assert.strictEqual(warnStub.callCount, 0)
+})
 
 // test 2
 it('elements of same type and props are equal', () => {
-  const testRenderer = ReactTestRenderer.create(React.createElement(Container));
-  testRenderer.update(React.createElement(Container));
-  assert.strictEqual(childRenderSpy.callCount, 1);
-});
+  const testRenderer = ReactTestRenderer.create(React.createElement(Container))
+  testRenderer.update(React.createElement(Container))
+  assert.strictEqual(childRenderSpy.callCount, 1)
+})
 
 // test 3
 it('elements of same type with different props are not equal', () => {
-  const testRenderer = ReactTestRenderer.create(React.createElement(Container));
-  testRenderer.update(React.createElement(Container, { title: 'New' }));
-  assert.strictEqual(childRenderSpy.callCount, 2);
-});
+  const testRenderer = ReactTestRenderer.create(React.createElement(Container))
+  testRenderer.update(React.createElement(Container, { title: 'New' }))
+  assert.strictEqual(childRenderSpy.callCount, 2)
+})
 ```
 
 We can rewrite these assertions and the `beforeEach` case to render these same components with Preact and validating the same `h1` and `h2` elements are making it to the so-called DOM. Our validation library, `assert`, can compare two objects, so let's try to find a renderer that will return an object for us to assert against.

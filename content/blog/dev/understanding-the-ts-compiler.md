@@ -1,5 +1,5 @@
 ---
-title:  Understanding the TypeScript Compiler
+title: Understanding the TypeScript Compiler
 date: 2020-05-19 15:12:02
 category: dev
 draft: false
@@ -10,9 +10,9 @@ I am trying to thoroughly test a library that has TypeScript support, but too ma
 The library consists of a single function, and the types themselves are very simple:
 
 ```ts
-declare function isEqual<A = any, B = any>(a: A, b: B): boolean;
+declare function isEqual<A = any, B = any>(a: A, b: B): boolean
 declare namespace isEqual {}
-export = isEqual;
+export = isEqual
 ```
 
 As a single function that compares two elements and returns a boolean, you can imagine the use cases are fairly wide-ranging. Folks want to compare deeply-nested objects and get a proper result, and I can relate! This package is a fork of a package that does the same comparison, but this package adds handlers specific to React (and now Preact/compat!), allowing it to dive deeply into React components and pull out the correct value for comparison.
