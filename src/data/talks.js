@@ -15,11 +15,11 @@ const talks = [
         eventDate: '5/26/2020',
         eventName: 'GraphQL Denver',
         eventType: 'meetup',
-        eventRecording: '@TODO',
+        eventRecording: 'https://www.youtube.com/watch?v=qQnLllEMqN8',
       },
     ],
-    exportedSlidesUrl: '',
-    hostedSlidesUrl: '',
+    moreInfoUrl:
+      'https://github.com/kale-stew/all-talks/tree/master/content/2020/urql-devtools',
   },
   {
     id: 'mlcl2018',
@@ -34,25 +34,9 @@ const talks = [
         eventRecording: 'https://youtu.be/MzrDy4s8MF8',
       },
     ],
-    exportedSlidesUrl:
+    moreInfoUrl:
       'https://github.com/kale-stew/ml-on-the-cl/blob/master/final.pdf',
-    hostedSlidesUrl: 'https://kale-stew.github.io/ml-on-the-cl',
-  },
-  {
-    id: 'ts2018',
-    title: 'How TypeScript Made Me a Better JavaScript Developer',
-    description:
-      'An overview of helpful patterns for writing TypeScript, and how they apply to a similarly-structured JavaScript code base.',
-    events: [
-      {
-        eventDate: '10/25/2018',
-        eventName: 'Formidable Denver Open House',
-        eventType: 'meetup',
-      },
-    ],
-    exportedSlidesUrl:
-      'https://github.com/kale-stew/typescript-is-awesome/blob/master/final.pdf',
-    hostedSlidesUrl: 'https://kale-stew.github.io/typescript-is-awesome/',
+    slidesUrl: 'https://kale-stew.github.io/ml-on-the-cl',
   },
   {
     id: 'rn2019',
@@ -73,9 +57,9 @@ const talks = [
         eventRecording: 'https://youtu.be/87trwew9Hik?t=1587',
       },
     ],
-    exportedSlidesUrl:
-      'https://github.com/kale-stew/react-to-react-native/blob/master/final.pdf',
-    hostedSlidesUrl: 'https://kale-stew.github.io/react-to-react-native/',
+    moreInfoUrl:
+      'https://github.com/kale-stew/all-talks/tree/master/content/2019/react-to-react-native',
+    slidesUrl: 'https://kale-stew.github.io/react-to-react-native/',
   },
   {
     id: 'gql2019',
@@ -90,9 +74,9 @@ const talks = [
         eventRecording: 'https://www.youtube.com/watch?v=RhQx579OTVc',
       },
     ],
-    exportedSlidesUrl:
-      'https://github.com/kale-stew/talks/blob/master/content/2019/evolution-of-an-api/final.pdf',
-    hostedSlidesUrl: '',
+    moreInfoUrl:
+      'hhttps://github.com/kale-stew/all-talks/tree/master/content/2019/evolution-of-an-api',
+    slidesUrl: '',
   },
   {
     id: 'ts2019',
@@ -106,10 +90,15 @@ const talks = [
         eventType: 'meetup',
         eventRecording: 'https://youtu.be/iBlGIS-UQsw?t=1638',
       },
+      {
+        eventDate: '10/25/2018',
+        eventName: 'Formidable Denver Open House',
+        eventType: 'meetup',
+      },
     ],
-    exportedSlidesUrl:
-      'https://github.com/kale-stew/ts-in-react/blob/master/final.pdf',
-    hostedSlidesUrl: 'https://kale-stew.github.io/ts-in-react/',
+    moreInfoUrl:
+      'https://github.com/kale-stew/all-talks/tree/master/content/2019/ts-in-react',
+    slidesUrl: 'https://kale-stew.github.io/ts-in-react/',
   },
   {
     id: 'mljs2018',
@@ -124,9 +113,9 @@ const talks = [
         eventRecording: 'https://youtu.be/QaV7a64mUYE',
       },
     ],
-    exportedSlidesUrl:
-      'https://github.com/kale-stew/zeit-day-2018/blob/master/final.pdf',
-    hostedSlidesUrl: 'https://kale-stew.github.io/zeit-day-2018/',
+    moreInfoUrl:
+      'https://github.com/kale-stew/all-talks/tree/master/content/2018/machine-learning-with-javascript',
+    slidesUrl: 'https://kale-stew.github.io/zeit-day-2018/',
   },
 ]
 

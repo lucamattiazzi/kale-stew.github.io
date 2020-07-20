@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .talk {
   display: flex;
   flex-direction: column;
@@ -20,4 +22,8 @@
   padding: 2rem 0;
   font-family: 'Fira Sans';
   text-align: center;
+}
+
+.talk-link {
+  color: $accent-pink !important;
 }
