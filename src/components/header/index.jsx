@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 
 import './index.scss'
 
-const BlogHeader = ({ title }) => (
-  <h1 className="blog-header">
+const SubHeader = ({ title }) => (
+  <h1 className="sub-header">
     <Link to={`/`} className="link">
       {title}
     </Link>
@@ -13,5 +13,5 @@ const BlogHeader = ({ title }) => (
 
 export const Header = ({ title, location, rootPath }) => {
   const isRoot = location.pathname === rootPath
-  return !isRoot && <BlogHeader title={title} />
+  return !isRoot && <SubHeader title={title} />
 }

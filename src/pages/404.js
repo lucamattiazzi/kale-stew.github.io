@@ -19,10 +19,10 @@ class NotFoundPage extends React.Component {
           hitting a route that doesn't exist.
         </p>
         <h2>Please allow Otis to guide you back home:</h2>
-        <a href="https://kyliestewart.tech/blog">
+        <a href="https://kylieis.online">
           <img
             src={WanderingOtis}
-            alt="An image of a black dog walking off into the horizon"
+            alt="A black dog walking off into the horizon"
           />
         </a>
       </Layout>

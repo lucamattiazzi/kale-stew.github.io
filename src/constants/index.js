@@ -1,7 +1,7 @@
-export * from './enum'
-
-export const BLOG_TITLE = `Blog`
-export const HOME_TITLE = `Home`
+export const THEME = {
+  LIGHT: 'light',
+  DARK: 'dark',
+}
 
 export const SOCIALS = {
   Email: 'kylie@kyliestewart.tech',

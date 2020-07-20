@@ -31,6 +31,7 @@ export const ThemeSwitch = () => {
     typeof window !== `undefined` &&
     (Dom.hasClassOfBody(THEME.DARK) ||
       window.matchMedia('(prefers-color-scheme: dark)').matches)
+
   const [checked, setChecked] = useState(isInitiallyDark)
 
   const handleChange = checked => {
@@ -40,7 +41,6 @@ export const ThemeSwitch = () => {
   }
 
   useEffect(() => {
-    const checked = Dom.hasClassOfBody(THEME.DARK)
     handleChange(checked)
   }, [checked])
 
