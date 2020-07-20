@@ -12,7 +12,7 @@ export default ({ location }) => (
     <h3>All of my talks, slides, and abstracts, in one place.</h3>
     <div className="talk-wrapper">
       {talks.map(t => (
-        <TalkCard talk={t} key={t.eventDate} />
+        <TalkCard talk={t} key={t.id} />
       ))}
     </div>
   </Layout>

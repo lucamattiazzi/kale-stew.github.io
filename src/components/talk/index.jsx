@@ -1,5 +1,5 @@
 import React from 'react'
-import { formatDate } from '../../utils/dates'
+import { formatTalkDate } from '../../utils/dates'
 
 import './index.scss'
 
@@ -9,7 +9,7 @@ export const TalkCard = ({ talk }) => (
     <div className="talk-description">{talk.description}</div>
     <div className="talk-event">
       <span>{talk.eventName} － </span>
-      <span>{formatDate(talk.eventDate)}</span>
+      <span>{formatTalkDate(talk.eventDate)}</span>
     </div>
     {talk.hostedSlidesUrl && (
       <a
