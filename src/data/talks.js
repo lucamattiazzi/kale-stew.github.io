@@ -1,14 +1,14 @@
 const talks = [
   {
-    eventDate: '5/26/2020',
+    eventDate: '7/16/2020',
     title: 'Demystifying urql With urql-devtools',
     description:
       'Using urql-devtools to better understand urql as a GraphQL client.',
-    eventName: 'GraphQL Denver',
+    eventName: 'RESTLess London',
     eventType: 'meetup',
     exportedSlidesUrl: '',
     hostedSlidesUrl: '',
-    recordedPresentationUrl: '',
+    recordedPresentationUrl: 'https://youtu.be/67glzvghPH0?t=3756',
   },
   {
     eventDate: '6/28/2018',
