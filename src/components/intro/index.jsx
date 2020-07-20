@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
+import { getRandomItem } from '../../utils/helpers'
 
 import './index.scss'
 
@@ -8,27 +9,34 @@ export const Intro = () => (
   <StaticQuery
     query={introQuery}
     render={data => {
-      const { author } = data.site.siteMetadata
+      const {
+        authorName,
+        authorLocation,
+        hobbies,
+        company,
+        employer,
+      } = data.site.siteMetadata
 
       return (
         <div className="intro">
           <Image
             className="intro-image"
             fixed={data.avatar.childImageSharp.fixed}
-            alt={author}
+            alt={authorName}
             style={{
               borderRadius: `100%`,
             }}
           />
           <div>
-            👋 Hi, I'm <b>Kylie Stewart</b>, a Software Engineer based in
-            Denver, Colorado.
+            👋 Hi, I'm <b>{authorName}</b>, a Software Engineer based in
+            {authorLocation}.
           </div>
           <div>
-            👩‍💻 I currently work at a Javascript consultancy named{' '}
-            <b>Formidable</b>.
+            👩‍💻 I currently work at a {company} named <b>{employer}</b>.
           </div>
-          <div>🏔️ When I'm not working, I like to hike with my dog, Otis.</div>
+          <div>
+            🏔️ When I'm not working, I like to {getRandomItem(hobbies)}.
+          </div>
         </div>
       )
     }}
@@ -46,8 +54,11 @@ const introQuery = graphql`
     }
     site {
       siteMetadata {
-        author
-        introduction
+        authorName
+        authorLocation
+        hobbies
+        company
+        employer
       }
     }
   }
