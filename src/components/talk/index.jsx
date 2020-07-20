@@ -4,7 +4,13 @@ import { formatTalkDate } from '../../utils/dates'
 import './index.scss'
 
 const RecordingLink = ({ url, eventName, talkTitle }) => (
-  <a href={url} title={`Link to a recording of ${talkTitle}`}>
+  <a
+    href={url}
+    title={`Link to a recording of ${talkTitle}`}
+    target="_blank"
+    noopener
+    noreferrer
+  >
     <span>📹 {eventName} － </span>
   </a>
 )
