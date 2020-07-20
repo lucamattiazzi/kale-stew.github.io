@@ -1,5 +1,5 @@
 import React from 'react'
-import { formatDate } from '../../utils/filters'
+import { formatDate } from '../../utils/dates'
 
 import './index.scss'
 

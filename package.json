@@ -13,8 +13,7 @@
     "dev": "gatsby develop",
     "start": "yarn run dev",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*/**.{js,jsx,scss}' 'gatsby-*.js' 'cli/*.js'",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "new-now": "node ./cli/new-now.js"
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public ."
   },
   "dependencies": {
     "gatsby": "^2.2.8",
