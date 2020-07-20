@@ -3,33 +3,32 @@ import { formatTalkDate } from '../../utils/dates'
 
 import './index.scss'
 
+const RecordingLink = ({ url, eventName, talkTitle }) => (
+  <a href={url} title={`Link to a recording of ${talkTitle}`}>
+    <span>📹 {eventName} － </span>
+  </a>
+)
+
 export const TalkCard = ({ talk }) => (
   <div className="talk">
     <h2>{talk.title}</h2>
     <div className="talk-description">{talk.description}</div>
     <div className="talk-event">
-      <span>{talk.eventName} － </span>
-      <span>{formatTalkDate(talk.eventDate)}</span>
+      {talk.events.map(({ eventRecording, eventName, eventDate }) => (
+        <>
+          {eventRecording ? (
+            <RecordingLink
+              talkTitle={talk.title}
+              eventName={eventName}
+              url={eventRecording}
+            />
+          ) : (
+            <span>{eventName} - </span>
+          )}
+          <span>{formatTalkDate(eventDate)}</span>
+          <br />
+        </>
+      ))}
     </div>
-    {talk.hostedSlidesUrl && (
-      <a
-        href={talk.hostedSlidesUrl}
-        title={`Link to live hosted slides for ${talk.title}`}
-      >
-        <span role="img" aria-label="Click to visit the slides">
-          💻 → Check out the slides
-        </span>
-      </a>
-    )}
-    {talk.recordedPresentationUrl && (
-      <a
-        href={talk.recordedPresentationUrl}
-        title={`Link to a recording of ${talk.title}`}
-      >
-        <span role="img" aria-label="Click to watch the recorded presentation">
-          📹 → Watch a recording of the presentation
-        </span>
-      </a>
-    )}
   </div>
 )
