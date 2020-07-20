@@ -1,4 +1,14 @@
 const posts = {
+  'Sunday July 19th 2020': {
+    location: 'Still in quarantine, still at home.',
+    travel: 'Hopefully, eventually?',
+    reading:
+      "'Never Split the Difference: Negotiating as if Your Life Dependended on It' by Chris Voss, for a soft skills reading group.",
+    watching: 'Community in its entirety for the first time.',
+    listeningTo: 'A lot of Glass Animals.',
+    learning:
+      'How to use k8s and docker to better implement staged deployments for a microservice-heavy ecosystem.',
+  },
   'Friday April 10th 2020': {
     location: 'In quarantine at home.',
     travel: 'Hopefully, eventually?',
