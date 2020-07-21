@@ -1,23 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Layout } from '../layout'
 import { Head } from '../components/head'
-import { NowCard } from '../components/now'
-import { formatNowDate, getMostRecentDate } from '../utils/dates'
+import { Now } from '../components/now'
 
-import posts from '../data/now.js'
+import { LATEST, RANDOM } from '../constants'
 
-const mostRecentDate = getMostRecentDate(posts)
-const mostRecentPost = Object.entries(posts[mostRecentDate])
+export default ({ location }) => {
+  const [postType, setPostType] = useState(LATEST)
 
-export default ({ location }) => (
-  <Layout location={location} title="What I'm Doing *Now*">
-    <Head title="Now" />
-    <h2>{formatNowDate(mostRecentDate)}</h2>
-    <ul className="now-wrapper">
-      {mostRecentPost.map(item => (
-        <NowCard item={item} />
-      ))}
-    </ul>
-    <a href="https://nownownow.com/about">What is this page?</a>
-  </Layout>
-)
+  return (
+    <Layout location={location} title="What I'm Doing *Now*">
+      <Head title="Now" />
+      <Now state={postType} />
+      <a className="now-link" href="https://nownownow.com/about">
+        What is this page?
+      </a>
+      <br />
+      <a className="now-link" onClick={() => setPostType(RANDOM)}>
+        Visit a random now from the past
+      </a>
+    </Layout>
+  )
+}
