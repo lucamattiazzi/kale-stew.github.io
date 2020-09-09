@@ -3,7 +3,8 @@ body.dark {
   text-shadow: $dark-text-shadow;
   color: $dark-light-font-color;
 
-  a {
+  a,
+  button {
     color: $dark-colored-font-color;
   }
 

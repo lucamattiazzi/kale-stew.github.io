@@ -9,7 +9,9 @@ import { LATEST, NOW_KEYS } from '../../constants'
 
 const NowCard = ({ post }) => (
   <>
-    <h2>{post.dayOfWeek}, {formatDate(post.date)}</h2>
+    <h2>
+      {post.dayOfWeek}, {formatDate(post.date)}
+    </h2>
     <ul className="now-wrapper">
       {Object.entries(post).map(([key, value]) => {
         return !NOW_KEYS[key] || !value ? null : (

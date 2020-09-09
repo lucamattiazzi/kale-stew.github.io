@@ -8,10 +8,12 @@ const RecordingLink = ({ url, eventName, talkTitle }) => (
     href={url}
     title={`Link to a recording of ${talkTitle}`}
     target="_blank"
-    noopener
-    noreferrer
+    rel="noopener noreferrer"
   >
-    <span>📹 {eventName} － </span>
+    <span role="img" aria-label="camcorder emoji">
+      📹
+    </span>{' '}
+    <span>{eventName} － </span>
   </a>
 )
 
@@ -41,8 +43,7 @@ export const TalkCard = ({ talk }) => (
             href={talk.slidesUrl}
             title={`Link to the hosted slides for ${talk.title}`}
             target="_blank"
-            noopener
-            noreferrer
+            rel="noopener noreferrer"
             className="talk-link"
           >
             <span>
@@ -60,8 +61,7 @@ export const TalkCard = ({ talk }) => (
             href={talk.moreInfoUrl}
             title={`Link to more info about ${talk.title}`}
             target="_blank"
-            noopener
-            noreferrer
+            rel="noopener noreferrer"
             className="talk-link"
           >
             <span>

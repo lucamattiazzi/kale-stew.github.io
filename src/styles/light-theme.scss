@@ -2,7 +2,8 @@ body.light {
   background-color: $light-background-color;
   text-shadow: $light-text-shadow;
 
-  a {
+  a,
+  button {
     color: $light-colored-font-color;
   }
 

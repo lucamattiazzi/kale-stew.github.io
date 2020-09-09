@@ -5,6 +5,7 @@ module.exports = {
   authorLocation: `Denver, Colorado`,
   company: `Javascript consultancy`,
   employer: `Formidable`,
+  resume: `https://kyliestewart.tech`,
   hobbies: [
     `hike with my dog, Otis`,
     `bake gluten-free goods`,
@@ -12,9 +13,8 @@ module.exports = {
     `create generative art`,
     `take pictures of my dog, Otis`,
     `go rock climbing`,
-    `shitpost on Twitter`,
+    `doomscroll on Twitter`,
     `complete samurai sudoku puzzles`,
-    `play Animal Crossing`,
     `backpack through slot canyons`,
     `learn new vegan recipes`,
     `rage against the machine`,

@@ -16,9 +16,9 @@ export default ({ location }) => {
         What is this page?
       </a>
       <br />
-      <a className="now-link" onClick={() => setPostType(RANDOM)}>
+      <button className="now-link" onClick={() => setPostType(RANDOM)}>
         Visit a random now from the past
-      </a>
+      </button>
     </Layout>
   )
 }

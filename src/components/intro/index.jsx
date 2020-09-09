@@ -10,11 +10,12 @@ export const Intro = () => (
     query={introQuery}
     render={data => {
       const {
-        authorName,
         authorLocation,
-        hobbies,
+        authorName,
         company,
         employer,
+        hobbies,
+        resume,
       } = data.site.siteMetadata
 
       return (
@@ -28,14 +29,31 @@ export const Intro = () => (
             }}
           />
           <div>
-            👋 Hi, I'm <b>{authorName}</b>, a Software Engineer based in
+            <span role="img" aria-label="waving emoji">
+              👋
+            </span>{' '}
+            Hi, I'm <b>{authorName}</b>, a Software Engineer based in{' '}
             {authorLocation}.
           </div>
           <div>
-            👩‍💻 I currently work at a {company} named <b>{employer}</b>.
+            <span role="img" aria-label="blonde female technologist emoji">
+              👩‍💻
+            </span>{' '}
+            I currently work at a {company} named <b>{employer}</b>
           </div>
           <div>
-            🏔️ When I'm not working, I like to {getRandomItem(hobbies)}.
+            (but if you want to work together, I'm{' '}
+            <a href={resume}>open to it</a>{' '}
+            <span role="img" aria-label="eyes looking left emoji">
+              👀
+            </span>
+            ).
+          </div>
+          <div>
+            <span role="img" aria-label="snow-capped mountain emoji">
+              🏔️
+            </span>{' '}
+            When I'm not working, I like to {getRandomItem(hobbies)}.
           </div>
         </div>
       )
@@ -54,11 +72,12 @@ const introQuery = graphql`
     }
     site {
       siteMetadata {
-        authorName
         authorLocation
-        hobbies
+        authorName
         company
         employer
+        hobbies
+        resume
       }
     }
   }
