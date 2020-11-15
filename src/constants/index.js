@@ -13,7 +13,7 @@ export const LATEST = 'latest'
 export const RANDOM = 'random'
 
 export const SOCIALS = {
-  Email: 'mailto:kylie@kyliestewart.tech',
+  Email: 'kylie@kyliestewart.tech',
   Homepage: 'https://kylieis.online',
   Instagram: 'https://instagram.com/kalestews',
   LinkedIn: 'https://www.linkedin.com/in/kylieastewart/',
